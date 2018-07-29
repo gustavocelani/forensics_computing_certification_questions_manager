@@ -1,0 +1,409 @@
+[S1-A1] Porque a coleta das informações é uma parte delicada do processo de invertigação forense?
+a. As informações coletadas podem estar corrompidas.
+b. Porque é nela que se define o que será ou não analisado.
+c. Nesta fase, pode-se prever evidências para sempre, se não for bem projetada e executada.
+d. Por conta do nível de conhecimento que ela exige.
+c
+
+[S1-A1] Qual das informações abaixo está correta sobre hash?
+a. É um algoritmo matemático capaz e gerar um número de comprimento único como resultado, independente da quantidade de bytes na entrada.
+b. Também conhecido como hash MD5, é o resultado de um cálculo a partir de uma string.
+c. É um agoritmo de criptografia utilizado para checagem de integridade.
+d. É uma técnica de criptografia de chaves, muito utiizados em certificados digitais.
+a
+
+[S1-A1] Em computação forense, o que é footprint?
+a. É uma técnica de coleta de evidências.
+b. É o impacto nas evidências causado pelo processo de coleta.
+c. É o nome dado aos rastros deixados pelo atacante na máquina alvo.
+d. Uma identificação de cada ferramenta utilizada no processo.
+b
+
+[S1-A1] Comparando um pen drive a disco rígido, assinae a alternativa verdadeira.
+a. Um pen drive só pode ter uma partição dentro, enquanto um disco rígido pode ter várias.
+b. Podem conter partiçõe de diversos formatos como Ext4, NTFS e FAT32.
+c. Ambos possuem um número físico definido de cabeças, setores e ciindros.
+d. Ambos não podem conter tabelas de partição.
+b
+
+[S1-A1] Por que é importante calcular os hashes das imagens (evidências) obtidas?
+a. Para impedir alterações nas evidências.
+b. Para criptografar as evidências, a fim de protegê-las.
+c. Para se ter certeza de que a evidência caracteriza uma prova.
+d. Para comprovar a integridade das evidências antes e após a análise.
+d
+
+[S1-A2] Assinale a alternativa correta sobre a coleta da heap de um processo.
+a. A heap não pode ser coletada.
+b. Dados importantes que o processo esteja manuseando podem estar na head.
+c. Normalmente esta região não conterá dados.
+d. Pode ser que o processo não utilize a heap. Neste caso, ele não utiliza memória para funcionar.
+b
+
+[S1-A2] Por que pode valer a pena coletar imagens de um disco inteiro ao invés de somente das partições?
+a. Para facilitar a montagem das partições posteriormente, na fase de análise.
+b. Por que é a única maneira de se conseguir uma cópia fiel de cada partição.
+c. Porque assim é garantido que os dados sejam coletados de forma legível.
+d. Podem existir dados importantes para a investigação fora das delimitações de partições.
+d
+
+[S1-A2] Normalmente, quando um processo usa a stack (pilha) ?
+a. Quando precisa passar argumentos para funções.
+b. Quando há necessidade de abrir arquivos.
+c. Quando precisa se comunicar com outro processo ou thread.
+d. Somente quando é carregado em memória.
+a
+
+[S1-A2] Qual das opções abaixo apresenta áreas válidas para coleta de memória?
+a. RAM e FPU
+b. RAM de user land e kernel land
+c. Cache L3, VRAM e GPU
+d. Buffer de disco rígido e ALU
+b
+
+[S1-A2] Assinale a melhor explicação para a volatilidade da RAM.
+a. Os dados podem ser recuperados facilmente.
+b. Os dados na RAM podem estar corrompidos no momento da coleta.
+c. Seu conteúdo é alterado a todo momento e perdido se o fornecimento de energia for interrompido.
+d. O circuito de realimentação (refresh circuit) faz com que os dados sejam mantidos enquanto houver energização.
+c
+
+[S1-A3] Assinale a alternativa correta sobre o inode:
+a. Contém informações sobre um arquivo, além de parte de seu conteúdo.
+b. Cada arquivo tem um inode, mas o inode também é um arquivo, que contém seu próprio inode.
+c. Contém informações sobre um arquivo.
+d. Para cada inode, podem existir 0 ou mais aquivos.
+c
+
+[S1-A3] O que faz o comando strace?
+a. Monitora o kernel e loga todas as chamadas feitas a ele.
+b. Monitora o processo e loga todas as chamadas a funções feitas por ele.
+c. Intercepta as chamadas de sistema de um processo e as relaciona num log.
+d. Intercepta as chamadas de biblioteca de um processo e as relaciona num log.
+c
+
+[S1-A3] Quantas partições podem ser endereçadas numa tabela de partições do DOS?
+a. Até 32 por disco.
+b. Até 255.
+c. Apenas uma. Cada partição precisa da sua própria tabela de partições.
+d. Até 4, sendo que uma delas pode ser estendida e apontar para outra tabela de partições.
+d
+
+[S1-A3] Qual dos programas abaixo não é capaz de listar uma tabela de partições?
+a. mount
+b. parted
+c. mmls
+d. fdisk
+a
+
+[S1-A3] Você vai inspecionar um disco que era utilizado numa máquina Windows. Logo na coleta você identifica que há somente um 'volume C' no disco rígido. É correto dizer que este HD está particionado?
+a. Não, particionado é quando há pelo ou menos duas partições.
+b. Sim, o Windows chama partições de 'volume'.
+c. Sim, todo HD tem que ser particionado para abrigar dados.
+d. Não, a não ser que houvesse outro disco com mais volumes.
+b
+
+[S1-A4] Faz sentido dumpar a memória mapeada por um ou mais processos, quando podemos depurar toda a memória e já ter tudo ?
+a. Sim, pois os dado que são capturados num dump individual não o são num dump completo.
+b. Não, só gera mais esforço e não tem utilidade comprovada.
+c. Não, e é até perigoso dumpar individualmente e perder algum dado.
+d. Sim, o dump individual é mais organizado, menor e mais simples de ser analisado.
+d
+
+[S1-A4] O módulo /dev/fmem deve ser sempre utilizado no lugar de /dev/mem. Verdadeiro ou falso ?
+a. Verdadeiro, o módulo /dev/fmem é mais novo e mais robusto.
+b. Falso. Instalar o módulo /dev/fmem gera um grande fingerprint.
+c. Verdadeiro, o módulo /dev/fmem é mais simples de utilizar.
+d. Falso. O módulo /dev/mem pode não estar disponível.
+b
+
+[S1-A4] O ____________ é uma versão do dd especialmente preparada para forense.
+a. xcopy
+b. dcfldd
+c. win32dd
+d. safecopy
+b
+
+[S1-A4] Como é possível recuperar um arquivo através de seu inode numa imagem que não monta?
+a. Extraindo os blocos que o inode relaciona.
+b. Fazendo carving com o foremost.
+c. Buscando com find -inum.
+d. Listando com ls.
+a
+
+[S1-A4] O que é gdb?
+a. Um debugger.
+b. Uma ferramenta de carving para ELF.
+c. Um compilador C.
+d. Um dumper para binários ELF.
+a
+
+[S2-A5] Por que a ordem de volatilidade dos dados deve ser respeitada?
+a. É o único jeito de se efetuar uma coleta.
+b. Porque com o tempo, os dados somem.
+c. Dados voláteis são sensíveis, logo, precisam ser coletados primeiro.
+d. Para aumentar o nível de confidencialidade da coleta.
+c
+
+[S2-A5] É confiável utilizar hashes MD5 e SHA-1 para checagem de integridade?
+a. Sim, principalmente se utilizados juntos pois aumenta a segurança.
+b. SHA-1 não, pois além de sofrer com rainbow tables, é muito grande.
+c. MD5 não, pois é facilmente exposto à ataques de rainbow tables.
+d. Sim, principalmente se utilizados juntos pois aumenta a confiabilidade.
+d
+
+[S2-A5] Em um servidor Linux você tenta dumpar a memória através do /dev/mem mas somente 1 megabyte de dados é copiado. Qual a causa mais provável?
+a. O usuário que rodou o dd não tem privilégios administrativos.
+b. A sintaxe do dd estava errada.
+c. O kernel foi compilado com uma proteção contra acesso direto à memória.
+d. Espaço em disco insuficiente.
+c
+
+[S2-A5] Resumidamente, o que significa 'formatar uma partição'?
+a. Especificar um sistema de arquivos para todo o disco.
+b. Especificar um sistema de arquivos para a partição.
+c. Apagar todo o disco.
+d. Apagar seus dados.
+b
+
+[S2-A5] Podemos montar um dump de memória com o mount? Por que?
+a. Não, a memória não é organizada o suficiente e não existe um sistema de arquivos nela.
+b. Sim, basta usar a opção do filesystem correto.
+c. Não, porque os arquivos que vão para a memória não são armazenados de forma contígua.
+d. Sim, mas primeiro é preciso converter o arquivo de dump para um formato de blocos.
+a
+
+[S2-A6] Qual opção do mount garante que a imagem montada não será escrita?
+a. -o ro
+b. --no-write
+c. --only-read
+d. -o readonly
+a
+
+[S2-A6] Qual das alternativas abaixo representa o código de identificação dos sistemas de arquivos FAT-32, NTFSv5 e ext4, respectivamente?
+a. 0xb, 07 e 131.
+b. 0x83, 0x131, e 0x07.
+c. 0x32, 0xNT e 0xe4.
+d. 0x0b, 0x70 e 0x83.
+a
+
+[S2-A6] O que são symbols num binário ELF?
+a. São parte dos metadadaos de um binário ELF, que ficam em seu inode.
+b. São endereços onde trechos de códigos serão carregados. São visualizados com o comando nm.
+c. São elementos que relacionam endereços a nomes, para facilitar o debugging.
+d. São todos os caracteres de utilizados no binário, que ficam numa tabela chamada de symbol tables.
+c
+
+[S2-A6] Numa busca por PDFs com carving, você encontra um único arquivo PDF corrompido. Qual ação parece ser mais efetiva?
+a. Tirar outro dump da fonte.
+b. Rodar o software de carving novamente.
+c. Partir para o carving manual.
+d. Rodar um software que conserte PDFs corrompidos.
+c
+
+[S2-A6] Existe ainda a possibilidade de o filesystem montado escrever em seu journal, mesmo sendo utilizada a opção correta do dd cobrada na questão anterior. Qual opção impede que isto aconteça?
+a. --no-journaling
+b. --no-load
+c. -o noload
+d. -o nl
+c
+
+[S2-A7] Além de win32dd e win64dd qual é o outro aplicativo desenvolvido pela monsols para fazer dump de filesystens?
+a. win128dd
+b. DumpItnow
+c. DumpIt
+d. windd
+e. dd
+c
+
+[S2-A7] Qual é o nome do novo sistema de partição do windows?
+a. REISERFS
+b. NTFS
+c. FAT512
+d. FAT256
+e. ReFS
+e
+
+[S2-A7] Qual é o significado das iniciais MZ que estão presentes no cabeçalho dos arquivos exe e os identifica?
+a. Mark Zbikowski
+b. Microsoft Zone
+c. MicrosoftZ
+d. Mark Zuckenberg
+a
+
+[S2-A7] Qual o nome da aplicação escrita em python para analisar dumps?
+a. Volatil
+b. dumpme
+c. finddump
+d. Volatility
+d
+
+[S2-A7] Quais são as iniciais encontradas no cabeçalho de um arquivo exe. que o identificam?
+a. ZN
+b. MZ
+c. NZ
+d. ZM
+b
+
+[S2-A8] O que faz o parâmetro /f do comando win32dd?
+a. já calcula um hash do dump gerado (2 para MD5)
+b. configura o arquivo de saída do dump
+c. já calcula um hash do dump gerado (2 para SHA)
+d. envia o dump para um servidor ntfs
+b
+
+[S2-A8] O que faz o parâmetro /l do comando win32dd?
+a. configura o arquivo de saída do dump
+b. já calcula um hash do dump gerado (2 para MD5)
+c. envia o dump para um servidor de rede
+d. já calcula um hash do dump gerado (2 para SHA)
+c
+
+[S2-A8] O que faz o parâmetro /s do comando win32dd?
+a. envia o dump para um servidor de rede
+b. configura o arquivo de saída do dump
+c. já calcula um hash do dump gerado (2 para MD5)
+d. envia o dump para um servidor ntfs
+c
+
+[S2-A8] Qual é o nome do sistema de partição mais utilizado em sistemas Windows?
+a. NTFS
+b. REISERFS
+c. FAT512
+d. ReFS
+a
+
+[S2-A8] Qual o nome da suíte de extração de memória em ambientes windows que não deve mais ser utilizada?
+a. Case
+b. dd
+c. kdd
+d. mdd
+d
+
+[S3-A9] Qual o nome da ferramenta utilizada para extrair o conteúdo de um objeto?
+a. pdfobj
+b. pdflist
+c. pdf-parser
+d. pdfid
+c
+
+[S3-A9] Qual o nome da ferramente utilizada para contar a quantidade de objetos em um PDF?
+a. pdfobj
+b. pdfid
+c. pdf-parser
+d. pdflist
+b
+
+[S3-A9] Base64, xor, uuencode, são exemplos de:
+a. algoritimos de criptografia
+b. algoritimos de encondig
+c. algoritimos de hash
+d. algoritimos de simulação
+b
+
+[S3-A9] A declaração de um objeto é sempre feita utilizando a tag obj. Como ele é fechado?
+a. \obj
+b. obj/
+c. endobj
+d. <\obj>
+c
+
+[S3-A9] Qual o nome da ferramenta utilizada para trabalhar com esteganografia?
+a. tcpdump
+b. outguess
+c. wireshark
+d. pdf-parser
+b
+
+[S3-A10] No nosso contexto, qual é o tipo de arquivo que trabalha como um container, abrigando tanto texto quanto binários?
+a. imagens
+b. documentos office
+c. documentos openoffice
+d. PDF
+d
+
+[S3-A10] Qual parâmetro do pdf-parser especifica qual é o id do objeto a ser extraído?
+a. -a
+b. -i
+c. -o
+d. -w
+c
+
+[S3-A10] Qual outro tipo de arquivo podemos encontrar em PDFs?
+a. Javascript
+b. sh
+c. documentos office
+d. exe
+a
+
+[S3-A10] Qual é a outra tag utilizada para declarar um objeto?
+a. R
+b. newobj
+c. Object
+d. newobject
+b
+
+[S3-A10] Ao olhar um PDF com um editor de textos, você verá definições de?
+a. documentos
+b. javascripts
+c. objetos
+d. páginas
+c
+
+[S3-A11] Qual é o filtro que tenho que aplicar para o tcpdump me trazer o tráfego somente do protocolo icmp e que o pacote seja maior que 0?
+a. 'icmp and len < 0'
+b. 'icmp and len or 0'
+c. 'icmp and len > 0'
+d. 'icmp and len = 0'
+c
+
+[S3-A11] Analisando o pacote forense.cap qual o ip de destino da ligação?
+a. 10.100.0.208
+b. 10.100.0.209 (Correta)
+c. 10.100.0.207
+d. 10.100.0.219
+b
+
+[S3-A11] Qual é o parâmetro para gravar o conteúdo de uma captura em um pacote?
+a. -i
+b. -p
+c. -w
+d. -z
+c
+
+[S3-A11] Qual a biblioteca responsável por armazenar os arquivos de captura de rede em um padrão?
+a. libext
+b. libc
+c. libpcap
+d. libresolv
+c
+
+[S3-A11] Qual é a ferramenta mais utilizada para captura de tráfego em modo texto?
+a. tcpdump
+b. ethereal
+c. wireshark
+d. pcap
+a
+
+[S3-A12] Qual é o manual onde encontramos mais informações sobre o tcpdump e as formas de captura?
+a. filter
+b. pcap-filter
+c. filter-pcap
+d. pcap
+b
+
+[S3-A12] Qual é o nome da técnica de captura de tráfego?
+a. gethering
+b. sniffing Correto
+c. snorting
+d. capturing
+b
+
+[S3-A12] O que significa RTP?
+a. Real Transport Protocol
+b. Real-time Transport Protocol
+c. Realay Transport Protocol
+d. Real-time Translate Protocol
+b
+
+QUESTIONS_END
