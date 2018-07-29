@@ -1,4 +1,4 @@
-# Forensics Cerfitication Questions Manager
+# Forensics COmputing Cerfitication Questions Manager
 
 Practice your knowledge about forensics computing. Here are some questions in portuguese about forensics computing that were made by 4Linux Forensics Computing Course.
 
@@ -25,7 +25,7 @@ Practice your knowledge about forensics computing. Here are some questions in po
  ***************************************************************/
 ```
 
-## Running Forensics Questions Manager
+## Running Forensics Computing Certification Questions Manager
 
 To run the Question Manager, follow this steps bellow:
 
